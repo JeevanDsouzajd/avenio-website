@@ -12,10 +12,9 @@ import {
 const serviceLinks = [
   "Web Development",
   "Cyber Security",
+  "AI Solutions & Development",
   "Graphic Design",
   "Digital Marketing",
-  "BPO",
-  "CMA",
 ];
 
 const socialLinks = [
@@ -69,8 +68,8 @@ export default function Footer() {
             </span>
           </Link>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-mist">
-            Your Vision, Our Solution. Technology, creativity and business
-            solutions that help organizations build, evolve and grow.
+            Your Vision, Our Solution. Technology, AI, creativity and digital
+            growth solutions that help organizations build, evolve and scale.
           </p>
 
           {/* Social Media Links */}
@@ -115,8 +114,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/pricing" className="text-sm text-mist transition-colors hover:text-ink">
-                Pricing
+              <Link href="/services" className="text-sm text-mist transition-colors hover:text-ink">
+                Services
               </Link>
             </li>
             <li>

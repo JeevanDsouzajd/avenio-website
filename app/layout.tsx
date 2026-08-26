@@ -29,11 +29,11 @@ export const metadata: Metadata = {
     template: "%s | Avenio Solutions",
   },
   description:
-    "Avenio Solutions builds and secures technology, designs and grows brands, and simplifies business operations - a single partner across web development, cybersecurity, design, marketing, BPO and CMA services.",
+    "Avenio Solutions builds and secures technology, creates AI-driven solutions, designs distinct brand identities, and drives digital growth - a single partner across web development, cybersecurity, AI solutions, graphic design, and digital marketing.",
   openGraph: {
     title: "Avenio Solutions",
     description:
-      "Technology, creativity and business solutions that help organizations build, evolve and grow.",
+      "Technology, AI, design, and digital growth solutions that help organizations build, secure and scale.",
     url: "https://avenio.in",
     siteName: "Avenio Solutions",
     images: ["/logo.png"],
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Avenio Solutions",
     description:
-      "Technology, creativity and business solutions that help organizations build, evolve and grow.",
+      "Technology, AI, design, and digital growth solutions that help organizations build, secure and scale.",
     images: ["/logo.png"],
   },
 };

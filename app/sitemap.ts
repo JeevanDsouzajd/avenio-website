@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://avenio.in";
-  const routes = ["", "/about", "/services", "/pricing", "/contact", "/terms"];
+  const routes = ["", "/about", "/services", "/contact", "/terms"];
 
   return routes.map((route) => ({
     url: `${base}${route}`,

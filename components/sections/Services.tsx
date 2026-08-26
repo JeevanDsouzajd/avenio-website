@@ -3,30 +3,29 @@ import Link from "next/link";
 import {
   Code2,
   ShieldCheck,
+  Bot,
   Palette,
   Megaphone,
-  Headset,
-  Calculator,
   ArrowRight,
   Sparkles,
   Layers,
-  TrendingUp,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
 
 const pillars = [
   {
     id: "01",
-    title: "Technology",
-    tagline: "Build & Secure",
+    title: "Technology & AI",
+    tagline: "Build, Secure & Automate",
     badgeBg: "bg-cyan/10 text-cyan border-cyan/20",
     iconBg: "bg-cyan/10 text-cyan",
     borderHover: "hover:border-cyan/50 hover:shadow-[0_0_30px_rgba(47,216,240,0.15)]",
     icon: Code2,
-    desc: "Engineering high-performance digital products and practical cybersecurity defenses that safeguard applications, data, and infrastructure from day one.",
+    desc: "Engineering high-performance web applications, intelligent AI agent solutions, and practical cybersecurity defenses that safeguard and scale your business.",
     capabilities: [
       { name: "Web & Full-Stack Development", icon: Code2 },
       { name: "Cybersecurity & Vulnerability Defense", icon: ShieldCheck },
+      { name: "AI Solutions & Intelligent Agents", icon: Bot },
       { name: "Cloud & Scalable Architecture", icon: Layers },
     ],
   },
@@ -45,21 +44,6 @@ const pillars = [
       { name: "Conversion & Creative Strategy", icon: Sparkles },
     ],
   },
-  {
-    id: "03",
-    title: "Business Solutions",
-    tagline: "Simplify & Optimize",
-    badgeBg: "bg-violet/10 text-violet border-violet/20",
-    iconBg: "bg-violet/10 text-violet",
-    borderHover: "hover:border-violet/50 hover:shadow-[0_0_30px_rgba(139,63,232,0.15)]",
-    icon: TrendingUp,
-    desc: "Optimizing everyday operations and financial accuracy with dependable business process management and professional cost accounting support.",
-    capabilities: [
-      { name: "Business Process Outsourcing (BPO)", icon: Headset },
-      { name: "Cost & Management Accounting (CMA)", icon: Calculator },
-      { name: "Operations & Back-Office Efficiency", icon: TrendingUp },
-    ],
-  },
 ];
 
 export default function Services() {
@@ -70,7 +54,7 @@ export default function Services() {
           <div>
             <p className="eyebrow">Our Core Disciplines</p>
             <h2 className="mt-4 max-w-xl text-3xl font-semibold leading-tight md:text-4xl">
-              Three disciplines,{" "}
+              Two disciplines,{" "}
               <span className="bg-avenio-gradient bg-clip-text text-transparent">
                 one accountable partner
               </span>
@@ -81,7 +65,7 @@ export default function Services() {
           </Button>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {pillars.map((p) => {
             const MainIcon = p.icon;
             return (

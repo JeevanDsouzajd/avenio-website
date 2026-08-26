@@ -4,10 +4,9 @@ import CTA from "@/components/sections/CTA";
 import {
   Code2,
   ShieldCheck,
+  Bot,
   Palette,
   Megaphone,
-  Headset,
-  Calculator,
   CheckCircle2,
   ArrowRight,
 } from "lucide-react";
@@ -16,36 +15,52 @@ import Button from "@/components/ui/Button";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore Avenio Solutions' services across Technology, Creative & Growth, and Business Solutions.",
+    "Explore Avenio Solutions' services across Technology, AI Solutions, Creative Design, and Digital Growth.",
 };
 
 const serviceGroups = [
   {
     id: "technology",
-    pillar: "Technology",
-    tagline: "Build & Secure",
+    pillar: "Technology & AI",
+    tagline: "Build, Secure & Automate",
     badge: "border-cyan/30 bg-cyan/10 text-cyan",
     services: [
       {
         icon: Code2,
         title: "Web Development",
-        desc: "Fast, scalable websites and applications built on modern frameworks designed to handle growth smoothly.",
+        desc: "Fast, scalable websites and digital applications built to perform reliably, handle growth smoothly, and deliver high user engagement.",
         features: [
           "Full-stack web applications",
-          "Next.js & React architecture",
+          "Modern frontend & backend architectures",
           "API & cloud backend integration",
-          "Speed, SEO & responsiveness",
+          "CI/CD pipelines & automated deployments",
+          "Speed, SEO & responsive optimization",
         ],
       },
       {
         icon: ShieldCheck,
         title: "Cyber Security",
-        desc: "Practical protection for your applications, infrastructure and data — built in from the start, not bolted on.",
+        desc: "Practical protection for your applications, infrastructure and data — built in from the start with continuous threat defense.",
         features: [
-          "Vulnerability assessments",
-          "Web application security",
-          "Access control & data hardening",
-          "Security compliance readiness",
+          "Cybersecurity assessment & audits",
+          "Network & endpoint security",
+          "Cloud security & data protection",
+          "Vulnerability assessment & threat monitoring",
+          "Security incident response",
+          "Security compliance & IT infrastructure support",
+        ],
+      },
+      {
+        icon: Bot,
+        title: "AI Solutions & Development",
+        desc: "Custom AI agents, generative AI models, and cognitive intelligence solutions designed to automate workflows and drive intelligent decision-making.",
+        features: [
+          "AI Agent Development",
+          "Generative AI Solutions",
+          "AI Integration",
+          "AI Document Intelligence",
+          "AI Voice Solutions",
+          "AI Analytics",
         ],
       },
     ],
@@ -80,36 +95,6 @@ const serviceGroups = [
       },
     ],
   },
-  {
-    id: "business",
-    pillar: "Business Solutions",
-    tagline: "Simplify & Optimize",
-    badge: "border-violet/30 bg-violet/10 text-violet",
-    services: [
-      {
-        icon: Headset,
-        title: "BPO",
-        desc: "Dependable business process outsourcing so your team can focus fully on product, vision, and core operations.",
-        features: [
-          "Customer support & helpdesk",
-          "Data entry & verification",
-          "Back-office workflow handling",
-          "Flexible dedicated teams",
-        ],
-      },
-      {
-        icon: Calculator,
-        title: "CMA",
-        desc: "Cost and management accounting to ensure financial accuracy, strategic budgeting, and operational visibility.",
-        features: [
-          "Cost structure & margin analysis",
-          "Management reporting & KPIs",
-          "Budgeting & cash-flow planning",
-          "Operational accounting support",
-        ],
-      },
-    ],
-  },
 ];
 
 export default function ServicesPage() {
@@ -119,7 +104,7 @@ export default function ServicesPage() {
         <Container>
           <p className="eyebrow">Services</p>
           <h1 className="mt-4 max-w-2xl text-4xl font-semibold leading-tight md:text-5xl">
-            Six services.{" "}
+            Five core services.{" "}
             <span className="bg-avenio-gradient bg-clip-text text-transparent">
               One accountable team.
             </span>
@@ -144,7 +129,13 @@ export default function ServicesPage() {
                 <span className="text-sm text-mist">{group.tagline}</span>
               </div>
 
-              <div className="mt-8 grid gap-6 md:grid-cols-2">
+              <div
+                className={`mt-8 grid gap-6 ${
+                  group.services.length === 3
+                    ? "md:grid-cols-2 lg:grid-cols-3"
+                    : "md:grid-cols-2"
+                }`}
+              >
                 {group.services.map((s) => {
                   const Icon = s.icon;
                   return (
@@ -178,11 +169,11 @@ export default function ServicesPage() {
 
                       <div className="mt-8 pt-2">
                         <Button
-                          href={`/pricing?service=${s.title.toLowerCase().replace(/\s+/g, "-")}#pricing-tabs`}
+                          href={`/contact?service=${encodeURIComponent(s.title)}`}
                           variant="secondary"
                           className="!w-full !justify-center !text-xs hover:border-cyan/50"
                         >
-                          View Pricing &amp; Plans for {s.title} <ArrowRight size={14} />
+                          Get Started with {s.title} <ArrowRight size={14} />
                         </Button>
                       </div>
                     </div>

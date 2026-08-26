@@ -7,7 +7,7 @@ import { Globe, MapPin } from "lucide-react";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Avenio Solutions is a technology, creative and business solutions partner operating across India, USA, UAE, and UK.",
+    "Avenio Solutions is a technology, AI, creative, and digital growth partner operating across India, USA, UAE, and UK.",
 };
 
 const hubs = [
@@ -15,7 +15,7 @@ const hubs = [
     country: "India",
     city: "Bengaluru",
     role: "Global Delivery Hub & Engineering Center",
-    desc: "Core software engineering, design studio, accounting specialists, and centralized delivery.",
+    desc: "Core software engineering, AI solutions, design studio, digital growth strategists, and centralized delivery.",
   },
   {
     country: "United States",
@@ -44,14 +44,14 @@ export default function AboutPage() {
         <Container>
           <p className="eyebrow">About Avenio</p>
           <h1 className="mt-4 max-w-2xl text-4xl font-semibold leading-tight md:text-5xl">
-            One partner, three disciplines that most companies buy separately.
+            One partner across the core disciplines that most companies buy separately.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-mist">
             Avenio Solutions exists because businesses shouldn&apos;t have to
-            juggle a web agency, a security consultant, a design studio and
+            juggle a web agency, a security consultant, an AI developer, and
             a marketing shop just to get one project done. We bring
-            technology, creativity and business strategy together under a
-            single accountable team.
+            technology, AI solutions, creative design, and growth marketing together
+            under a single accountable team.
           </p>
         </Container>
       </section>

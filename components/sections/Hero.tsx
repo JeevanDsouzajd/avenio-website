@@ -3,14 +3,14 @@
 import { motion } from "framer-motion";
 import Button from "@/components/ui/Button";
 import Image from "next/image";
-import { ArrowRight, Code2, Sparkles, TrendingUp } from "lucide-react";
+import { ArrowRight, Bot, Sparkles, TrendingUp } from "lucide-react";
 
 const orbitalPillars = [
   {
     angle: 0,
-    title: "Technology",
-    desc: "Build & Secure",
-    icon: Code2,
+    title: "Technology & AI",
+    desc: "Build & Automate",
+    icon: Bot,
     iconColor: "text-cyan",
     iconBg: "bg-cyan/10",
     borderHover: "hover:border-cyan/50",
@@ -28,8 +28,8 @@ const orbitalPillars = [
   },
   {
     angle: 240,
-    title: "Business",
-    desc: "Scale & Optimize",
+    title: "Growth",
+    desc: "Market & Scale",
     icon: TrendingUp,
     iconColor: "text-violet",
     iconBg: "bg-violet/10",
@@ -47,7 +47,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <p className="eyebrow">Technology · Creativity · Business</p>
+          <p className="eyebrow">Technology · AI · Creativity · Growth</p>
           <h1 className="mt-5 text-4xl font-semibold leading-[1.1] tracking-tight md:text-6xl">
             Your Vision,
             <br />
@@ -56,9 +56,9 @@ export default function Hero() {
             </span>
           </h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-mist md:text-lg">
-            Avenio brings technology, creativity and business strategy
-            together under one roof - helping organizations build, secure,
-            and grow with a single accountable partner.
+            Avenio brings technology, AI solutions, creative design, and growth
+            strategy together under one roof - helping organizations build,
+            secure, and scale with a single accountable partner.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Button href="/services">
