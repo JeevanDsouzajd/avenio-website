@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import Container from "@/components/ui/Container";
 
 const links = [
@@ -39,27 +39,37 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-2 md:flex">
-          {links.map((link) => {
-            const isActive =
-              pathname === link.href ||
-              (link.href !== "/" && pathname.startsWith(link.href));
+        <div className="hidden items-center gap-6 md:flex">
+          <nav className="flex items-center gap-2">
+            {links.map((link) => {
+              const isActive =
+                pathname === link.href ||
+                (link.href !== "/" && pathname.startsWith(link.href));
 
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`rounded-full px-4 py-2 text-sm transition-all duration-300 ${
-                  isActive
-                    ? "bg-avenio-gradient font-semibold text-navy-dark shadow-[0_0_16px_rgba(47,216,240,0.35)]"
-                    : "text-mist hover:bg-cyan/10 hover:text-cyan"
-                }`}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
-        </nav>
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`rounded-full px-4 py-2 text-sm transition-all duration-300 ${
+                    isActive
+                      ? "bg-avenio-gradient font-semibold text-navy-dark shadow-[0_0_16px_rgba(47,216,240,0.35)]"
+                      : "text-mist hover:bg-cyan/10 hover:text-cyan"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </nav>
+
+          <a
+            href="tel:+919886666341"
+            className="group flex items-center gap-2 rounded-full border border-line bg-white/5 px-3.5 py-1.5 text-xs font-medium text-ink transition-all duration-300 hover:border-cyan/50 hover:bg-cyan/10 hover:text-cyan"
+          >
+            <Phone size={13} className="text-cyan transition-transform group-hover:scale-110" />
+            <span>+91 98866 66341</span>
+          </a>
+        </div>
 
         <button
           className="text-ink md:hidden"
@@ -94,6 +104,17 @@ export default function Navbar() {
                 </Link>
               );
             })}
+
+            <div className="mt-2 border-t border-line/60 pt-3">
+              <a
+                href="tel:+919886666341"
+                onClick={() => setOpen(false)}
+                className="flex items-center gap-2.5 rounded-xl border border-cyan/30 bg-cyan/10 px-4 py-3 text-sm font-semibold text-cyan transition-colors hover:bg-cyan/20"
+              >
+                <Phone size={16} />
+                <span>Call Support: +91 98866 66341</span>
+              </a>
+            </div>
           </Container>
         </nav>
       )}

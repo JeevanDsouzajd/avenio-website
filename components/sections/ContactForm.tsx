@@ -158,8 +158,12 @@ function ContactFormInner() {
 
       {status === "error" && (
         <p className="text-sm text-rose-400">
-          Something went wrong. Please email us directly at{" "}
-          <a href="mailto:jdjeevan26@gmail.com" className="underline hover:text-cyan">
+          Something went wrong. Please reach us directly at{" "}
+          <a href="tel:+919886666341" className="font-semibold underline hover:text-cyan">
+            +91 98866 66341
+          </a>{" "}
+          or email{" "}
+          <a href="mailto:jdjeevan26@gmail.com" className="font-semibold underline hover:text-cyan">
             jdjeevan26@gmail.com
           </a>
           .

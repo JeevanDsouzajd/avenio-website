@@ -7,6 +7,8 @@ import {
   Instagram,
   Youtube,
   Twitter,
+  Phone,
+  Mail,
 } from "lucide-react";
 
 const serviceLinks = [
@@ -53,7 +55,7 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-line bg-navy-dark">
-      <Container className="grid gap-12 py-16 md:grid-cols-[1.3fr_1fr_1fr]">
+      <Container className="grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
           <Link href="/" className="group flex items-center gap-3">
             <Image
@@ -124,9 +126,42 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <a href="mailto:jdjeevan26@gmail.com" className="text-sm text-mist transition-colors hover:text-ink">
-                jdjeevan26@gmail.com
+              <Link href="/terms" className="text-sm text-mist transition-colors hover:text-ink">
+                Terms &amp; Conditions
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="eyebrow mb-4">Support &amp; Inquiries</h3>
+          <ul className="space-y-3">
+            <li>
+              <a
+                href="tel:+919886666341"
+                className="group flex items-center gap-2.5 text-sm text-mist transition-colors hover:text-ink"
+              >
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-line bg-white/5 text-cyan transition-colors group-hover:border-cyan/40 group-hover:bg-cyan/10">
+                  <Phone size={14} />
+                </div>
+                <span>+91 98866 66341</span>
               </a>
+            </li>
+            <li>
+              <a
+                href="mailto:jdjeevan26@gmail.com"
+                className="group flex items-center gap-2.5 text-sm text-mist transition-colors hover:text-ink"
+              >
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-line bg-white/5 text-cyan transition-colors group-hover:border-cyan/40 group-hover:bg-cyan/10">
+                  <Mail size={14} />
+                </div>
+                <span>jdjeevan26@gmail.com</span>
+              </a>
+            </li>
+            <li className="pt-1">
+              <span className="inline-block rounded-full border border-cyan/30 bg-cyan/10 px-2.5 py-0.5 text-[11px] font-medium text-cyan">
+                Customer Support: Mon - Sat
+              </span>
             </li>
           </ul>
         </div>

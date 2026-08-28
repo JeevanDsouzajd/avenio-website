@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import ContactForm from "@/components/sections/ContactForm";
-import { Mail, MapPin, Globe } from "lucide-react";
+import { Mail, Phone, MessageSquare, MapPin, Globe } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -25,16 +25,72 @@ export default function ContactPage() {
             Let&apos;s talk about your project
           </h1>
           <p className="mt-6 max-w-sm text-mist leading-relaxed">
-            Fill in the form and our team will get back to you within one
-            business day. We serve clients across global time zones.
+            Fill in the form or reach out directly via call or WhatsApp. Our team
+            is ready to assist you across global time zones.
           </p>
 
-          <div className="mt-8 space-y-4">
+          {/* Direct Support Channels */}
+          <div className="mt-8 space-y-3">
+            <a
+              href="tel:+919886666341"
+              className="flex items-center justify-between rounded-2xl border border-line bg-navy-light/60 p-4 transition-all duration-200 hover:border-cyan/40 hover:bg-white/5 group"
+            >
+              <div className="flex items-center gap-3.5">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-cyan/10 text-cyan transition-colors group-hover:bg-cyan/20">
+                  <Phone size={18} />
+                </div>
+                <div>
+                  <p className="text-xs font-medium text-mist">Customer Support &amp; Calls</p>
+                  <p className="text-sm font-semibold text-ink group-hover:text-cyan transition-colors">
+                    +91 98866 66341
+                  </p>
+                </div>
+              </div>
+              <span className="rounded-full bg-cyan/10 px-2.5 py-1 text-[11px] font-semibold text-cyan">
+                Call Now
+              </span>
+            </a>
+
+            <a
+              href="https://wa.me/919886666341"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between rounded-2xl border border-line bg-navy-light/60 p-4 transition-all duration-200 hover:border-azure/40 hover:bg-white/5 group"
+            >
+              <div className="flex items-center gap-3.5">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-azure/10 text-azure transition-colors group-hover:bg-azure/20">
+                  <MessageSquare size={18} />
+                </div>
+                <div>
+                  <p className="text-xs font-medium text-mist">WhatsApp Chat</p>
+                  <p className="text-sm font-semibold text-ink group-hover:text-azure transition-colors">
+                    +91 98866 66341
+                  </p>
+                </div>
+              </div>
+              <span className="rounded-full bg-azure/10 px-2.5 py-1 text-[11px] font-semibold text-azure">
+                Chat
+              </span>
+            </a>
+
             <a
               href="mailto:jdjeevan26@gmail.com"
-              className="inline-flex items-center gap-3 rounded-xl border border-line bg-white/5 px-4 py-3 text-sm text-mist transition-colors hover:border-cyan/40 hover:text-ink"
+              className="flex items-center justify-between rounded-2xl border border-line bg-navy-light/60 p-4 transition-all duration-200 hover:border-violet/40 hover:bg-white/5 group"
             >
-              <Mail size={18} className="text-cyan" /> jdjeevan26@gmail.com
+              <div className="flex items-center gap-3.5">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-line bg-violet/10 text-violet transition-colors group-hover:bg-violet/20">
+                  <Mail size={18} />
+                </div>
+                <div>
+                  <p className="text-xs font-medium text-mist">Email Inquiries</p>
+                  <p className="text-sm font-semibold text-ink group-hover:text-violet transition-colors">
+                    jdjeevan26@gmail.com
+                  </p>
+                </div>
+              </div>
+              <span className="rounded-full bg-violet/10 px-2.5 py-1 text-[11px] font-semibold text-violet">
+                Email
+              </span>
             </a>
           </div>
 

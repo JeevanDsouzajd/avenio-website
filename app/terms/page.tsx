@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import Link from "next/link";
-import { ShieldCheck, Mail } from "lucide-react";
+import { ShieldCheck, Mail, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
@@ -243,6 +243,13 @@ export default function TermsPage() {
                 Conditions, please reach out to our legal and administrative team:
               </p>
               <div className="mt-4 flex flex-wrap gap-4">
+                <a
+                  href="tel:+919886666341"
+                  className="inline-flex items-center gap-2 rounded-xl border border-line bg-navy px-4 py-2.5 text-xs font-semibold text-ink transition-colors hover:border-cyan/40 hover:text-cyan"
+                >
+                  <Phone size={14} className="text-cyan" />
+                  +91 98866 66341
+                </a>
                 <a
                   href="mailto:jdjeevan26@gmail.com"
                   className="inline-flex items-center gap-2 rounded-xl border border-line bg-navy px-4 py-2.5 text-xs font-semibold text-ink transition-colors hover:border-cyan/40 hover:text-cyan"
