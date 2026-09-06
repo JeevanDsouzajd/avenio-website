@@ -163,8 +163,8 @@ function ContactFormInner() {
             +91 98866 66341
           </a>{" "}
           or email{" "}
-          <a href="mailto:jdjeevan26@gmail.com" className="font-semibold underline hover:text-cyan">
-            jdjeevan26@gmail.com
+          <a href="mailto:info@aveniosolutions.com" className="font-semibold underline hover:text-cyan">
+            info@aveniosolutions.com
           </a>
           .
         </p>

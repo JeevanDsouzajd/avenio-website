@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-const RECIPIENT_EMAIL = "jdjeevan26@gmail.com";
+const RECIPIENT_EMAIL = process.env.RECIPIENT_EMAIL || "info@aveniosolutions.com";
 
 interface ContactPayload {
   name: string;
@@ -154,7 +154,7 @@ Reply directly to: ${data.email}
     } else {
       console.log(`[Form Submission Received for ${RECIPIENT_EMAIL}]:`, data);
       console.log(
-        "Notice: To enable live email delivery to jdjeevan26@gmail.com, set SMTP_USER and SMTP_PASS (Gmail App Password) in your .env.local file."
+        "Notice: To enable live email delivery to info@aveniosolutions.com, configure SMTP_HOST, SMTP_PORT, SMTP_USER, and SMTP_PASS in your .env.local file or hosting dashboard."
       );
     }
 

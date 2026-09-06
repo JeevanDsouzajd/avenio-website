@@ -121,6 +121,16 @@ export default function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/products" className="text-sm text-cyan transition-colors hover:text-cyan/80">
+                Products
+              </Link>
+            </li>
+            <li>
+              <Link href="/clients" className="text-sm text-mist transition-colors hover:text-ink">
+                Clients
+              </Link>
+            </li>
+            <li>
               <Link href="/contact" className="text-sm text-mist transition-colors hover:text-ink">
                 Contact
               </Link>
@@ -149,13 +159,13 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="mailto:jdjeevan26@gmail.com"
+                href="mailto:info@aveniosolutions.com"
                 className="group flex items-center gap-2.5 text-sm text-mist transition-colors hover:text-ink"
               >
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-line bg-white/5 text-cyan transition-colors group-hover:border-cyan/40 group-hover:bg-cyan/10">
                   <Mail size={14} />
                 </div>
-                <span>jdjeevan26@gmail.com</span>
+                <span>info@aveniosolutions.com</span>
               </a>
             </li>
             <li className="pt-1">

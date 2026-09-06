@@ -74,7 +74,7 @@ export default function ContactPage() {
             </a>
 
             <a
-              href="mailto:jdjeevan26@gmail.com"
+              href="mailto:info@aveniosolutions.com"
               className="flex items-center justify-between rounded-2xl border border-line bg-navy-light/60 p-4 transition-all duration-200 hover:border-violet/40 hover:bg-white/5 group"
             >
               <div className="flex items-center gap-3.5">
@@ -84,7 +84,7 @@ export default function ContactPage() {
                 <div>
                   <p className="text-xs font-medium text-mist">Email Inquiries</p>
                   <p className="text-sm font-semibold text-ink group-hover:text-violet transition-colors">
-                    jdjeevan26@gmail.com
+                    info@aveniosolutions.com
                   </p>
                 </div>
               </div>

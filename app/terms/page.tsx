@@ -16,7 +16,7 @@ const sections = [
     content: (
       <p>
         By accessing or using the website{" "}
-        <span className="text-ink font-medium">aveniosolutions.in</span> (&ldquo;Website&rdquo;) or
+        <span className="text-ink font-medium">aveniosolutions.com</span> (&ldquo;Website&rdquo;) or
         engaging with Avenio Solutions (&ldquo;Avenio,&rdquo; &ldquo;we,&rdquo; &ldquo;our,&rdquo;
         or &ldquo;us&rdquo;) for any professional services, you agree to be bound by these
         Terms and Conditions (&ldquo;Terms&rdquo;). If you do not agree to these Terms, please
@@ -251,11 +251,11 @@ export default function TermsPage() {
                   +91 98866 66341
                 </a>
                 <a
-                  href="mailto:jdjeevan26@gmail.com"
+                  href="mailto:info@aveniosolutions.com"
                   className="inline-flex items-center gap-2 rounded-xl border border-line bg-navy px-4 py-2.5 text-xs font-semibold text-ink transition-colors hover:border-cyan/40 hover:text-cyan"
                 >
                   <Mail size={14} className="text-cyan" />
-                  jdjeevan26@gmail.com
+                  info@aveniosolutions.com
                 </a>
                 <Link
                   href="/contact"
