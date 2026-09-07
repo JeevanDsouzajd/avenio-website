@@ -153,10 +153,11 @@ const clients: Client[] = [
     accentColor: "text-cyan",
     badgeBorder: "border-cyan/30 text-cyan bg-cyan/10",
     logoSymbol: (
-      <div className="flex items-center gap-2 font-display text-xl font-bold italic text-white">
+      <div className="flex items-center gap-2 font-display text-xl font-bold tracking-tight text-white">
         <span className="flex h-7 w-7 items-center justify-center rounded-full bg-cyan font-serif text-sm font-black italic text-navy-dark">
           hp
         </span>
+        <span>HP</span>
       </div>
     ),
   },

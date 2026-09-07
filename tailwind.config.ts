@@ -8,7 +8,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Avenio brand tokens — pulled from the logomark
+        // Avenio brand tokens - pulled from the logomark
         navy: {
           DEFAULT: "#0A1220", // primary dark background
           light: "#101B2D",

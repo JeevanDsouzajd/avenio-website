@@ -2,7 +2,17 @@ import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import WhyAvenio from "@/components/sections/WhyAvenio";
 import CTA from "@/components/sections/CTA";
-import { Globe, MapPin } from "lucide-react";
+import {
+  Globe,
+  MapPin,
+  Calendar,
+  Palette,
+  Code2,
+  ShieldCheck,
+  Bot,
+  UsersRound,
+  Sparkles,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About",
@@ -37,6 +47,45 @@ const hubs = [
   },
 ];
 
+const companyStats = [
+  {
+    value: "2+",
+    suffix: "Years",
+    label: "Market Presence",
+    desc: "Delivering end-to-end technology, design, and workforce solutions across international markets.",
+    icon: Calendar,
+    color: "text-cyan",
+    borderHover: "hover:border-cyan/40",
+  },
+  {
+    value: "25+",
+    suffix: "Projects",
+    label: "Graphic Design & Branding",
+    desc: "Logos, brand styleguides, visual campaign kits, and enterprise marketing collaterals.",
+    icon: Palette,
+    color: "text-azure",
+    borderHover: "hover:border-azure/40",
+  },
+  {
+    value: "10+",
+    suffix: "Builds",
+    label: "Web & Mobile Applications",
+    desc: "Scalable full-stack web platforms, SaaS portals, and iOS/Android applications deployed.",
+    icon: Code2,
+    color: "text-violet",
+    borderHover: "hover:border-violet/40",
+  },
+  {
+    value: "30+",
+    suffix: "Matches",
+    label: "Talent & Staffing Placements",
+    desc: "Vetted technical and business professionals placed with enterprise and high-growth clients.",
+    icon: UsersRound,
+    color: "text-violet",
+    borderHover: "hover:border-violet/40",
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -47,12 +96,61 @@ export default function AboutPage() {
             One partner across the core disciplines that most companies buy separately.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-mist">
-            Avenio Solutions exists because businesses shouldn&apos;t have to
-            juggle a web agency, a security consultant, an AI developer, and
-            a marketing shop just to get one project done. We bring
-            technology, AI solutions, creative design, and growth marketing together
-            under a single accountable team.
+            Present in the market for 2+ years, Avenio Solutions exists because businesses
+            shouldn&apos;t have to juggle a web agency, a security consultant, an AI developer,
+            and a marketing shop just to get one project done. We bring technology, AI solutions,
+            creative design, digital growth, and staffing support together under a single
+            accountable team.
           </p>
+        </Container>
+      </section>
+
+      {/* Track Record / By The Numbers Section */}
+      <section className="section-padding border-b border-line bg-navy-dark">
+        <Container>
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="eyebrow inline-flex items-center gap-2">
+              <Sparkles size={14} className="text-cyan" />
+              Proven Track Record
+            </p>
+            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-ink md:text-4xl">
+              2+ Years of Delivery.{" "}
+              <span className="bg-avenio-gradient bg-clip-text text-transparent">
+                Measurable Results.
+              </span>
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-mist md:text-base">
+              A dependable track record built on execution velocity, engineering rigor, and lasting client trust.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+            {companyStats.map((stat) => {
+              const Icon = stat.icon;
+              return (
+                <div
+                  key={stat.label}
+                  className={`group relative rounded-3xl border border-line bg-navy-light/40 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-navy-light/70 ${stat.borderHover}`}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-baseline gap-1.5 font-display text-3xl font-bold tracking-tight text-white md:text-4xl">
+                      <span className="bg-avenio-gradient bg-clip-text text-transparent">{stat.value}</span>
+                      <span className="font-mono text-xs font-medium uppercase tracking-wider text-mist">{stat.suffix}</span>
+                    </div>
+                    <div className={`flex h-10 w-10 items-center justify-center rounded-xl bg-white/5 ${stat.color} transition-transform group-hover:scale-110`}>
+                      <Icon size={20} />
+                    </div>
+                  </div>
+                  <h3 className="mt-4 font-display text-base font-bold text-ink">
+                    {stat.label}
+                  </h3>
+                  <p className="mt-2 text-xs leading-relaxed text-mist">
+                    {stat.desc}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </Container>
       </section>
 

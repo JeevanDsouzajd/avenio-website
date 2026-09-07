@@ -1,4 +1,4 @@
-# Avenio Solutions — Website
+# Avenio Solutions - Website
 
 Next.js 15 + TypeScript + Tailwind CSS. See the chat response this file
 came with for the full step-by-step setup, GitHub, and deployment guide.
@@ -21,8 +21,8 @@ npm start
 
 ## Structure
 
-- `app/` — pages (App Router)
-- `components/layout/` — Navbar, Footer
-- `components/sections/` — Hero, Services, WhyAvenio, Process, CTA, ContactForm
-- `components/ui/` — Button, Container
-- `public/` — static assets (logo)
+- `app/` - pages (App Router)
+- `components/layout/` - Navbar, Footer
+- `components/sections/` - Hero, Services, WhyAvenio, Process, CTA, ContactForm
+- `components/ui/` - Button, Container
+- `public/` - static assets (logo)

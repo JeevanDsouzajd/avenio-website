@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | Avenio Solutions",
   },
   description:
-    "Avenio Solutions builds and secures technology, creates AI-driven solutions, designs distinct brand identities, and drives digital growth - a single partner across web development, cybersecurity, AI solutions, graphic design, and digital marketing.",
+    "Avenio Solutions builds and secures technology, creates AI-driven solutions, designs distinct brand identities, drives digital growth, and provides staffing & recruitment support - a single partner across web development, cybersecurity, AI solutions, graphic design, digital marketing, and talent acquisition.",
   openGraph: {
     title: "Avenio Solutions",
     description:

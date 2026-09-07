@@ -9,6 +9,8 @@ import {
   ArrowRight,
   Sparkles,
   Layers,
+  UsersRound,
+  Smartphone,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
 
@@ -24,6 +26,7 @@ const pillars = [
     desc: "Engineering high-performance web applications, intelligent AI agent solutions, and practical cybersecurity defenses that safeguard and scale your business.",
     capabilities: [
       { name: "Web & Full-Stack Development", icon: Code2 },
+      { name: "Mobile App Development (iOS & Android)", icon: Smartphone },
       { name: "Cybersecurity & Vulnerability Defense", icon: ShieldCheck },
       { name: "AI Solutions & Intelligent Agents", icon: Bot },
       { name: "Cloud & Scalable Architecture", icon: Layers },
@@ -44,6 +47,21 @@ const pillars = [
       { name: "Conversion & Creative Strategy", icon: Sparkles },
     ],
   },
+  {
+    id: "03",
+    title: "Business & Workforce",
+    tagline: "Hire & Scale",
+    badgeBg: "bg-violet/10 text-violet border-violet/20",
+    iconBg: "bg-violet/10 text-violet",
+    borderHover: "hover:border-violet/50 hover:shadow-[0_0_30px_rgba(139,63,232,0.15)]",
+    icon: UsersRound,
+    desc: "Finding and placing the right talent for your organization - from sourcing and screening to onboarding - across technical and business roles.",
+    capabilities: [
+      { name: "Technical & Non-Technical Staffing", icon: UsersRound },
+      { name: "Candidate Screening & Evaluation", icon: ShieldCheck },
+      { name: "Contract & Permanent Placement", icon: Sparkles },
+    ],
+  },
 ];
 
 export default function Services() {
@@ -54,7 +72,7 @@ export default function Services() {
           <div>
             <p className="eyebrow">Our Core Disciplines</p>
             <h2 className="mt-4 max-w-xl text-3xl font-semibold leading-tight md:text-4xl">
-              Two disciplines,{" "}
+              Three disciplines,{" "}
               <span className="bg-avenio-gradient bg-clip-text text-transparent">
                 one accountable partner
               </span>
@@ -65,7 +83,7 @@ export default function Services() {
           </Button>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {pillars.map((p) => {
             const MainIcon = p.icon;
             return (

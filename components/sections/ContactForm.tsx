@@ -21,10 +21,12 @@ type FormValues = z.infer<typeof schema>;
 
 const servicesList = [
   "Web Development",
+  "Mobile App Development",
   "Cyber Security",
   "AI Solutions & Development",
   "Graphic Design",
   "Digital Marketing",
+  "Staffing & Recruitment",
   "Other",
 ];
 

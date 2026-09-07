@@ -9,13 +9,15 @@ import {
   Megaphone,
   CheckCircle2,
   ArrowRight,
+  UsersRound,
+  Smartphone,
 } from "lucide-react";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Explore Avenio Solutions' services across Technology, AI Solutions, Creative Design, and Digital Growth.",
+    "Explore Avenio Solutions' seven core services across Web Development, Mobile App Development, Cybersecurity, AI Solutions, Creative Design, Digital Marketing, and Staffing & Recruitment.",
 };
 
 const serviceGroups = [
@@ -38,9 +40,22 @@ const serviceGroups = [
         ],
       },
       {
+        icon: Smartphone,
+        title: "Mobile App Development",
+        desc: "Intuitive, high-performance iOS and Android applications designed for smooth user experiences, offline reliability, and scalable backends.",
+        features: [
+          "Native iOS & Android mobile applications",
+          "Cross-platform builds (Flutter & React Native)",
+          "Fluid mobile UI/UX & micro-interactions",
+          "App Store & Google Play deployment",
+          "Real-time notifications & offline sync",
+          "Secure API integration & mobile analytics",
+        ],
+      },
+      {
         icon: ShieldCheck,
         title: "Cyber Security",
-        desc: "Practical protection for your applications, infrastructure and data — built in from the start with continuous threat defense.",
+        desc: "Practical protection for your applications, infrastructure and data - built in from the start with continuous threat defense.",
         features: [
           "Cybersecurity assessment & audits",
           "Network & endpoint security",
@@ -95,6 +110,27 @@ const serviceGroups = [
       },
     ],
   },
+  {
+    id: "workforce",
+    pillar: "Business & Workforce",
+    tagline: "Hire & Scale",
+    badge: "border-violet/30 bg-violet/10 text-violet",
+    services: [
+      {
+        icon: UsersRound,
+        title: "Staffing & Recruitment",
+        desc: "End-to-end hiring support - from sourcing and screening to placement. We help businesses find the right talent, faster, across technical and non-technical roles.",
+        features: [
+          "Technical & non-technical talent sourcing",
+          "Candidate screening & evaluation",
+          "Interview coordination & scheduling",
+          "Contract & permanent staffing",
+          "Workforce planning & consultation",
+          "Domain-specific recruitment pipelines",
+        ],
+      },
+    ],
+  },
 ];
 
 export default function ServicesPage() {
@@ -104,7 +140,7 @@ export default function ServicesPage() {
         <Container>
           <p className="eyebrow">Services</p>
           <h1 className="mt-4 max-w-2xl text-4xl font-semibold leading-tight md:text-5xl">
-            Five core services.{" "}
+            Seven core services.{" "}
             <span className="bg-avenio-gradient bg-clip-text text-transparent">
               One accountable team.
             </span>
@@ -130,11 +166,10 @@ export default function ServicesPage() {
               </div>
 
               <div
-                className={`mt-8 grid gap-6 ${
-                  group.services.length === 3
+                className={`mt-8 grid gap-6 ${group.services.length === 3
                     ? "md:grid-cols-2 lg:grid-cols-3"
                     : "md:grid-cols-2"
-                }`}
+                  }`}
               >
                 {group.services.map((s) => {
                   const Icon = s.icon;

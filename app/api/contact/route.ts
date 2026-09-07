@@ -44,7 +44,7 @@ export async function POST(request: Request) {
     const smtpHost = process.env.SMTP_HOST || "smtp.gmail.com";
     const smtpPort = Number(process.env.SMTP_PORT) || 465;
 
-    const emailSubject = `🚀 New Lead: ${data.name} — ${data.service || "General Inquiry"}`;
+    const emailSubject = `🚀 New Lead: ${data.name} - ${data.service || "General Inquiry"}`;
 
     const htmlContent = `
       <!DOCTYPE html>
@@ -70,7 +70,7 @@ export async function POST(request: Request) {
         <body>
           <div class="card">
             <div class="header">
-              <h1>Avenio Solutions — New Lead Submission</h1>
+              <h1>Avenio Solutions - New Lead Submission</h1>
               <p>Received via avenio.in contact form on ${submissionTime}</p>
             </div>
             <div class="body">

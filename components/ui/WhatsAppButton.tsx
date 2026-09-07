@@ -14,13 +14,12 @@ export default function WhatsAppButton() {
   return (
     <aside
       aria-label="Contact options"
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-3"
+      className="fixed bottom-7 right-5 z-50 flex items-center gap-3 sm:bottom-10 sm:right-10"
     >
       {/* Tooltip banner */}
       <div
-        className={`pointer-events-none hidden rounded-full border border-[#25D366]/30 bg-navy-dark/95 px-4 py-2 text-xs font-medium text-ink shadow-[0_4px_20px_rgba(0,0,0,0.5)] backdrop-blur-md transition-all duration-300 sm:block ${
-          hovered ? "translate-x-0 opacity-100" : "translate-x-3 opacity-0"
-        }`}
+        className={`pointer-events-none hidden rounded-full border border-[#25D366]/30 bg-navy-dark/95 px-4 py-2 text-xs font-medium text-ink shadow-[0_4px_20px_rgba(0,0,0,0.5)] backdrop-blur-md transition-all duration-300 sm:block ${hovered ? "translate-x-0 opacity-100" : "translate-x-3 opacity-0"
+          }`}
       >
         <span className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-[#25D366]" />

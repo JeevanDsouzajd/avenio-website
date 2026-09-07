@@ -13,10 +13,12 @@ import {
 
 const serviceLinks = [
   "Web Development",
+  "Mobile App Development",
   "Cyber Security",
   "AI Solutions & Development",
   "Graphic Design",
   "Digital Marketing",
+  "Staffing & Recruitment",
 ];
 
 const socialLinks = [
@@ -121,13 +123,18 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/products" className="text-sm text-cyan transition-colors hover:text-cyan/80">
+              <Link href="/products" className="text-sm text-mist transition-colors hover:text-ink">
                 Products
               </Link>
             </li>
             <li>
               <Link href="/clients" className="text-sm text-mist transition-colors hover:text-ink">
                 Clients
+              </Link>
+            </li>
+            <li>
+              <Link href="/careers" className="text-sm text-mist transition-colors hover:text-ink">
+                Careers
               </Link>
             </li>
             <li>
@@ -168,10 +175,16 @@ export default function Footer() {
                 <span>info@aveniosolutions.com</span>
               </a>
             </li>
-            <li className="pt-1">
-              <span className="inline-block rounded-full border border-cyan/30 bg-cyan/10 px-2.5 py-0.5 text-[11px] font-medium text-cyan">
-                Customer Support: Mon - Sat
-              </span>
+            <li>
+              <a
+                href="mailto:helpdesk@aveniosolutions.com"
+                className="group flex items-center gap-2.5 text-sm text-mist transition-colors hover:text-ink"
+              >
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-line bg-white/5 text-azure transition-colors group-hover:border-azure/40 group-hover:bg-azure/10">
+                  <Mail size={14} />
+                </div>
+                <span>helpdesk@aveniosolutions.com</span>
+              </a>
             </li>
           </ul>
         </div>
